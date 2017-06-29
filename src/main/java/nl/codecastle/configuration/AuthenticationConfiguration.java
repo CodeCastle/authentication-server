@@ -7,12 +7,15 @@ import org.springframework.security.config.annotation.authentication.configurati
 import org.springframework.security.config.annotation.authentication.configurers.GlobalAuthenticationConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
+/**
+ * Basic {@link GlobalAuthenticationConfigurerAdapter} implementation.
+ */
 @EnableGlobalAuthentication
 @Configuration
 public class AuthenticationConfiguration extends GlobalAuthenticationConfigurerAdapter {
 
     @Autowired
-    UserDetailsService userDetailsService;
+    private UserDetailsService userDetailsService;
 
     @Override
     public void init(AuthenticationManagerBuilder auth) throws Exception {

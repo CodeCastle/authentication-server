@@ -1,0 +1,6 @@
+security:
+    user:
+        password: programirame
+server:
+    contextPath: /uaa
+    port: 8282    

@@ -1,0 +1,6 @@
+curl -X POST -vu acme:acmesecret http://localhost:8282/uaa/oauth/token -H "Accept: application/json" -d "password=programirame&username=userOne&grant_type=password&scope=openid&client_secret=acmesecret&client_id=acme"
+
+
+curl http://localhost:8080/hello -H "Authorization:: Bearer d530a8df-7377-48fb-8a8b-8559068f4f59"
+
+curl http://localhost:8282/uaa/user -H "Authorization: Bearer d530a8df-7377-48fb-8a8b-8559068f4f59"

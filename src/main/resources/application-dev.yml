@@ -1,0 +1,17 @@
+spring:
+    application:
+        name: user
+    datasource:
+        driverClassName: org.postgresql.Driver
+        initialize: true
+        password: @C!Ak[ZT8.
+        url: jdbc:postgresql://localhost:5433/zeus
+        username: authadmin
+    h2:
+        console:
+            enabled: true
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        hibernate:
+            ddl-auto: create-drop
+            use-new-id-generator-mappings: true

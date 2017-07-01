@@ -1,6 +1,10 @@
-security:
-    user:
-        password: programirame
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: debug
+            springframework:
+                web: DEBUG
 server:
     contextPath: /uaa
-    port: 8282    
+    port: 8282

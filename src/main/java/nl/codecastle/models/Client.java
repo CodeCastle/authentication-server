@@ -1,8 +1,16 @@
 package nl.codecastle.models;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Set;
 
+/**
+ * Model of the authentication client.
+ */
 @Entity
 public class Client {
 
@@ -17,14 +25,26 @@ public class Client {
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> scopes;
 
+    /**
+     * Empty constructor.
+     */
     public Client() {
+        // empty
     }
 
-    public Client(String name, String secret, Set<AuthorizationGrantTypes> authorizationGrantType,
+    /**
+     * Construct a Client object. The id will be assigned when the client is saved in the database.
+     *
+     * @param name                    Client name.
+     * @param secret                  Client secret.
+     * @param authorizationGrantTypes Allowed authorization grant types.
+     * @param scopes                  Authentication scopes.
+     */
+    public Client(String name, String secret, Set<AuthorizationGrantTypes> authorizationGrantTypes,
                   Set<String> scopes) {
         this.name = name;
         this.secret = secret;
-        this.authorizationGrantType = authorizationGrantType;
+        this.authorizationGrantType = authorizationGrantTypes;
         this.scopes = scopes;
     }
 

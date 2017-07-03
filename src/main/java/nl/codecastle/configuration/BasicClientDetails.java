@@ -11,9 +11,17 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * {@link ClientDetails} implementation based on a {@link Client} model.
+ */
 public class BasicClientDetails implements ClientDetails {
     private final Client client;
 
+    /**
+     * Creates an object based on the given client.
+     *
+     * @param client model of the client
+     */
     public BasicClientDetails(Client client) {
         this.client = client;
     }

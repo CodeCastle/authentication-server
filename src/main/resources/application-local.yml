@@ -2,16 +2,16 @@ spring:
     application:
         name: user
     datasource:
-        driverClassName: org.h2.Driver
+        driverClassName: org.postgresql.Driver
         initialize: true
-        password: atropos
-        url: jdbc:h2:mem:USERS;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-        username: atropos
+        password: C@!Ak[ZT8.
+        url: jdbc:postgresql://localhost:5433/zeus
+        username: authadmin
     h2:
         console:
             enabled: true
     jpa:
-        database-platform: org.hibernate.dialect.H2Dialect
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
         hibernate:
             ddl-auto: create-drop
             use-new-id-generator-mappings: true

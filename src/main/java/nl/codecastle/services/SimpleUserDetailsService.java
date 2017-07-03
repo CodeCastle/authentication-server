@@ -1,5 +1,7 @@
-package nl.codecastle.configuration;
 
+package nl.codecastle.services;
+
+import nl.codecastle.configuration.UserDetailsImplementation;
 import nl.codecastle.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

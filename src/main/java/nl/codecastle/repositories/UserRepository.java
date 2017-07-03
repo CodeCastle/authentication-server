@@ -11,5 +11,4 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends CrudRepository<AppUser, Long>{
 
     AppUser findByUsername(String userName);
-
 }

@@ -10,7 +10,18 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ClientRepository extends CrudRepository<Client, Long> {
 
+    /**
+     * Get client by id.
+     *
+     * @param id The id of the Client to retrieve.
+     * @return The retrieved client.
+     */
     Client findById(Long id);
 
+    /**
+     * Get Client by name.
+     * @param clientName The name of the Client to retrieve.
+     * @return The retrieved client.
+     */
     Client findByName(String clientName);
 }

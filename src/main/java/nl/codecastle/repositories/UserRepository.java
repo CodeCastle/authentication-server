@@ -10,6 +10,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRepository extends CrudRepository<AppUser, Long>{
 
+    /**
+     * Get user by username.
+     *
+     * @param userName Username of the client to retrieve.
+     * @return The retrieved user.
+     */
     AppUser findByUsername(String userName);
-
 }

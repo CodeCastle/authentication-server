@@ -1,17 +1,28 @@
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: debug
+            springframework:
+                web: DEBUG
+server:
+    contextPath: /uaa
+    port: 8282
 spring:
     application:
         name: user
     datasource:
-        driverClassName: org.postgresql.Driver
+        driverClassName: org.h2.Driver
         initialize: true
-        password: @C!Ak[ZT8.
-        url: jdbc:postgresql://localhost:5433/zeus
-        username: authadmin
+        password: atropos
+        url: jdbc:h2:mem:AUTH_SERVER;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        username: atropos
     h2:
         console:
             enabled: true
+            path: /h2db
     jpa:
-        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        database-platform: org.hibernate.dialect.H2Dialect
         hibernate:
             ddl-auto: create-drop
             use-new-id-generator-mappings: true

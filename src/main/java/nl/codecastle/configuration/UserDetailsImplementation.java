@@ -9,12 +9,12 @@ import java.util.Collection;
 import java.util.List;
 
 
-class UserDetailsImplementation implements UserDetails {
+public class UserDetailsImplementation implements UserDetails {
 
     private final List<GrantedAuthority> authorities = AuthorityUtils.createAuthorityList("ROLE_USER");
     private final AppUser appUser;
 
-    UserDetailsImplementation(AppUser appUser) {
+    public UserDetailsImplementation(AppUser appUser) {
         this.appUser = appUser;
     }
 
